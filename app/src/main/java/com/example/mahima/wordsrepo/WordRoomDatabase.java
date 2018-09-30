@@ -56,8 +56,10 @@ public abstract class WordRoomDatabase extends RoomDatabase {
 
             mWordDao.deleteAll();
 
-            for (String word : words) {
-                mWordDao.insert(new Word(word));
+            if (mWordDao.getAWord().length < 1) {
+                for (String word : words) {
+                    mWordDao.insert(new Word(word));
+                }
             }
             return null;
         }
