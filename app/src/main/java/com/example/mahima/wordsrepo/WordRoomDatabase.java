@@ -8,7 +8,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-@Database(entities = Word.class, version = 1, exportSchema = false)
+@Database(entities = Word.class, version = 2, exportSchema = false)
 public abstract class WordRoomDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "word";
